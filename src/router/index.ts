@@ -7,10 +7,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      meta: { title: 'Виталий Кузьмин | Руководитель IT проектов' },
       component: HomeView
       // component: () => import('../views/AboutView.vue')
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  //console.log(to)
+  document.title = to.meta.title
+  next()
 })
 
 export default router
