@@ -3,6 +3,8 @@ import IconTelegram from './icons/IconTelegram.vue'
 import IconGithub from './icons/IconGithub.vue'
 import IconChecklist from './icons/IconChecklist.vue'
 import IconSquare from './icons/IconSquare.vue'
+import IconClients from './icons/IconClients.vue'
+import IconGraph from './icons/IconGraph.vue'
 </script>
 
 <template lang="pug">
@@ -18,15 +20,15 @@ import IconSquare from './icons/IconSquare.vue'
                 | Опыт в ИТ 12 лет.
 
             .first-screen__field 
-                a.button(href="/" title="")
+                a.first-screen__button.button.button_blue(href="/" title="")
                     | Скачать CV
-                a.button(href="" title="")
+                a.first-screen__button.button.button_circle(href="/" title="")
                     <IconTelegram />
-                a.button(href="#" title="")
+                a.first-screen__button.button.button_circle(href="/" title="")
                     <IconGithub />
 
         .first-screen__about
-            .first-screen__info-box.info-box 
+            .first-screen__info-box.first-screen__info-box_top.info-box 
                 .info-box__title
                     | +25
                 .info-box__description 
@@ -34,7 +36,7 @@ import IconSquare from './icons/IconSquare.vue'
 
             .first-screen__info-box.first-screen__info-box_bottom.info-box 
                 .info-box__icon 
-                    // icon
+                    <IconClients />
                 .info-box__content
                     .info-box__title
                         | 30
@@ -44,7 +46,7 @@ import IconSquare from './icons/IconSquare.vue'
             .first-screen__circle.first-screen__circle_top.circle
             .first-screen__circle.first-screen__circle_bottom.circle
             .first-screen__icon-graph
-                // icon
+                <IconGraph />
             .first-screen__icon-check
                 <IconChecklist />
             img.first-screen__image(src="/src/assets/about.png" alt="@@")
@@ -64,28 +66,90 @@ import IconSquare from './icons/IconSquare.vue'
 
   &__content {
     margin-top: 250px;
-    width: 664px;
+    width: 464px;
+  }
+
+  &__field {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__button {
+    margin-right: 24px;
   }
 
   &__about {
     margin-top: 120px;
     position: relative;
     width: 614px;
+    //background: #f00;
   }
 
   &__info-box {
     position: absolute;
+
+    &_top {
+      top: 28px;
+      right: 322px;
+    }
+
+    &_bottom {
+      top: 486px;
+      right: 81px;
+    }
   }
 
   &__circle {
     position: absolute;
+
+    &_top {
+      top: 357px;
+      right: 592px;
+    }
+
+    &_bottom {
+      top: 456px;
+      right: 3px;
+    }
   }
 
   &__square {
     position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 156px;
+
+    &_top {
+      top: 197px;
+      right: -30px;
+    }
+
+    &_bottom {
+      top: 444px;
+      right: 450px;
+    }
+  }
+
+  &__icon-graph {
+    position: absolute;
+    top: 83px;
+    right: 31px;
+    width: 58px;
+    height: 58px;
+  }
+
+  &__icon-check {
+    top: 199px;
+    left: 14px;
+    position: absolute;
+    width: 58px;
+    height: 58px;
   }
 
   &__image {
+    margin-left: 44px;
     width: 516px;
     height: 554px;
   }

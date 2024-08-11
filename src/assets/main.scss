@@ -14,10 +14,17 @@ a {
   padding: 12px;
   display: inline-flex;
   align-items: center;
-  border: 1px solid #000;
+  border-radius: 36px;
+  border: 1px solid #007aff;
 
   &_circle {
     border-radius: 50%;
+  }
+
+  &_blue {
+    padding: 12px 36px;
+    background: #007aff;
+    color: #fff;
   }
 }
 
