@@ -2,7 +2,7 @@
 .header
   .header__container.container 
     a.header__logo.logo(href="/" title="")
-      img.header__logo-image(src="/src/assets/logo.png" alt="@@")
+      img.header__logo-image(src="/src/assets/images/logo.png" alt="@@")
     
     nav.header__navigation.navigation 
       ul.navigation__ul 

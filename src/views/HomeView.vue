@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Header from '../components/HeaderItem.vue'
+import HeaderScreen from '@/components/HeaderScreen.vue'
 import FirstScreen from '@/components/FirstScreen.vue'
+import ClientsScreen from '@/components/ClientsScreen.vue'
 </script>
 
 <template>
-  <Header />
+  <HeaderScreen />
   <FirstScreen />
+  <ClientsScreen />
 </template>

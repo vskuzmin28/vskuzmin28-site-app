@@ -49,7 +49,7 @@ import IconGraph from './icons/IconGraph.vue'
                 <IconGraph />
             .first-screen__icon-check
                 <IconChecklist />
-            img.first-screen__image(src="/src/assets/about.png" alt="@@")
+            img.first-screen__image(src="/src/assets/images/about.png" alt="@@")
             .first-screen__square.first-screen__square_top.square
                 <IconSquare />
             .first-screen__square.first-screen__square_bottom.square
