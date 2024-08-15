@@ -1,3 +1,5 @@
+@import './helpers/vars.scss';
+
 *,
 *::before,
 *::after {
@@ -8,16 +10,14 @@
 
 body {
   min-height: 100vh;
-  background: #fff;
+  background: $color-white;
   transition:
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: $montserrat-400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }

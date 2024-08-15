@@ -34,7 +34,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #d3d2d2;
+    border-bottom: 1px solid $color-gray;
     height: 98px;
   }
 
@@ -69,10 +69,10 @@
   &__link {
     font-size: 16px;
     font-weight: normal;
-    color: #2b2b2b;
+    color: $color-black;
 
     &:hover {
-      color: #007aff;
+      color: $color-blue;
     }
   }
 }

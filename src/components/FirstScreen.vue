@@ -166,13 +166,13 @@ import IconGraph from './icons/IconGraph.vue'
     3px 43px 26px 0px rgba(0, 0, 0, 0.03),
     5px 76px 31px 0px rgba(0, 0, 0, 0.01),
     8px 119px 33px 0px rgba(0, 0, 0, 0);
-  background: rgb(255, 255, 255);
+  background: $color-white;
 }
 
 .circle {
   width: 22px;
   height: 22px;
-  background: #44aafc;
+  background: $color-blue-light;
   border-radius: 50%;
 }
 </style>
