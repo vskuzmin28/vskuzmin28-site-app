@@ -1,79 +1,87 @@
+<script setup lang="ts">
+  import IconLogo from './icons/IconLogo.vue'
+</script>
+
 <template lang="pug">
 .header
   .header__container.container 
     a.header__logo.logo(href="/" title="")
-      img.header__logo-image(src="/src/assets/images/logo.png" alt="@@")
+      <IconLogo />
     
-    nav.header__navigation.navigation 
-      ul.navigation__ul 
-        li.navigation__item 
-          a.navigation__link(href="/" title="")
-            | Обо мне
-        li.navigation__item 
-          a.navigation__link(href="/" title="")
-            | Кейсы
-        li.navigation__item 
-          a.navigation__link(href="/" title="")
-            | Посты
-        li.navigation__item 
-          a.navigation__link(href="/" title="")
-            | Контакты
+    //- nav.header__navigation.navigation 
+    //-   ul.navigation__ul 
+    //-     li.navigation__item 
+    //-       a.navigation__link(href="/" title="")
+    //-         | Обо мне
+    //-     li.navigation__item 
+    //-       a.navigation__link(href="/" title="")
+    //-         | Опыт работы
+    //-     li.navigation__item 
+    //-       a.navigation__link(href="/" title="")
+    //-         | Проекты
+    //-     li.navigation__item 
+    //-       a.navigation__link(href="/" title="")
+    //-         | Контакты
+
+    //- a.button.button_blue(href="/" title="")
+    //-   | Скачать CV
 </template>
 
 <style lang="scss">
-.container {
-  margin: 0 auto;
-  display: flex;
-  width: 1280px;
-}
-
-.header {
-  width: 100%;
-
-  &__container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $color-gray;
-    height: 98px;
-  }
-
-  &__logo-image {
-    width: 193px;
-    height: 60px;
-    transition: 0.4s;
-
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-}
-
-.navigation {
-  &__ul {
-    margin: 0;
-    padding: 0;
+  .container {
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    max-width: 1280px;
   }
 
-  &__item {
-    margin-right: 40px;
-    list-style: none;
+  .header {
+    width: 100%;
 
-    &:last-child {
-      margin-right: 0;
+    &__container {
+      padding: 28px 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__logo-image {
+      max-width: 190px;
+      height: auto;
+      transition: 0.4s;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 
-  &__link {
-    font-size: 16px;
-    font-weight: normal;
-    color: $color-black;
+  .navigation {
+    &__ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
 
-    &:hover {
-      color: $color-blue;
+    &__item {
+      margin-right: 40px;
+      list-style: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      font-family: $montserrat-400;
+      font-size: 18px;
+      font-weight: normal;
+      color: $color-black;
+
+      &:hover {
+        color: $color-blue;
+      }
     }
   }
-}
 </style>

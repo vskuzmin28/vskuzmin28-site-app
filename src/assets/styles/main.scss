@@ -3,6 +3,7 @@
 @import './fonts.scss';
 
 #app {
+  font-weight: 400;
   font-weight: normal;
 }
 
@@ -27,6 +28,13 @@ a {
     padding: 12px 36px;
     background: $color-blue;
     color: $color-white;
+  }
+
+  &--disabled {
+    background: $color-gray;
+    border-color: $color-gray;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
