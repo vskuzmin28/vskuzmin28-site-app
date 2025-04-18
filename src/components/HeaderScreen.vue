@@ -23,8 +23,8 @@
     //-       a.navigation__link(href="/" title="")
     //-         | Контакты
 
-    //- a.button.button_blue(href="/" title="")
-    //-   | Скачать CV
+    a.button.button_blue(href="../public/resume_kuzmin_v_hh.pdf" title="")
+      | Скачать CV
 </template>
 
 <style lang="scss">

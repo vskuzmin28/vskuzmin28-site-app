@@ -6,6 +6,8 @@
   import IconSquare from './icons/IconSquare.vue'
   import IconClients from './icons/IconClients.vue'
   import IconGraph from './icons/IconGraph.vue'
+  import IconHabr from './icons/IconHabr.vue'
+  import IconLinkedin from './icons/IconLinkedin.vue'
 </script>
           
 <template lang="pug">
@@ -21,33 +23,42 @@
                   | Опыт в ИТ 12 лет.
 
               .first-screen__field 
-                  a.first-screen__button.button.button_circle(href="https://t.me/vskuzmin28" target="_blank" title="")
-                      <IconTelegram />
+                  a.first-screen__button.button.button_circle(href="https://www.linkedin.com/in/vskuzmin28/" target="_blank" title="")
+                      <IconLinkedin />
+                  a.first-screen__button.button.button_circle(href="https://career.habr.com/vskuzmin28" target="_blank" title="")
+                      <IconHabr />
                   a.first-screen__button.button.button_circle(href="https://github.com/vskuzmin28" target="_blank" title="")
                       <IconGithub />
+                  a.first-screen__button.button.button_circle(href="https://t.me/vskuzmin28" target="_blank" title="")
+                      <IconTelegram />
 
           .first-screen__about
-              //- .first-screen__info-box.first-screen__info-box_top.info-box 
-              //-     .info-box__title
-              //-         | +25
-              //-     .info-box__description 
-              //-         | Запущенных проектов
+              //- .first-screen__info-box.first-screen__info-box_top.info-box
+              //-     .info-box__icon 
+              //-         <IconClients />
+              //-     .info-box__content
+              //-         .info-box__title
+              //-             | 25
+              //-         .info-box__description 
+              //-             | Проектов
 
               //- .first-screen__info-box.first-screen__info-box_bottom.info-box 
               //-     .info-box__icon 
               //-         <IconClients />
               //-     .info-box__content
               //-         .info-box__title
-              //-             | 30
+              //-             | 15
               //-         .info-box__description 
               //-             | Клиентов
 
-              .first-screen__circle.first-screen__circle_top.circle
-              .first-screen__circle.first-screen__circle_bottom.circle
-              .first-screen__icon-graph
-                  <IconGraph />
-              .first-screen__icon-check
-                  <IconChecklist />
+              //- .first-screen__circle.first-screen__circle_top.circle 1
+              //- .first-screen__circle.first-screen__circle_bottom.circle 2
+              //- .first-screen__icon-graph
+              //-     <IconGraph />
+              //-     | 1
+              //- .first-screen__icon-check
+              //-     <IconChecklist />
+              //-     | 2
               .first-screen__banner
                 img.first-screen__banner-image(src="/src/assets/images/about.png" alt="@@")
                 <IconFirstScreenBanner />
@@ -56,6 +67,9 @@
 
 <style lang="scss">
   .first-screen {
+    padding: 0 0 60px 0;
+    background: $color-gray-light;
+
     &__container {
       display: flex;
       flex-direction: row;
@@ -66,6 +80,7 @@
 
     &__content {
       max-width: 464px;
+      cursor: default;
     }
 
     &__field {
@@ -106,10 +121,12 @@
 
     &__info-box {
       position: absolute;
+      z-index: 10;
 
       &_top {
-        top: 28px;
-        right: 322px;
+        top: 128px;
+        left: -12px;
+        
       }
 
       &_bottom {
@@ -120,6 +137,7 @@
 
     &__circle {
       position: absolute;
+      z-index: 110;
 
       &_top {
         top: 357px;
@@ -145,7 +163,7 @@
         right: 0px;
         position: absolute;
         width: auto;
-        height: 750px;
+        max-height: 750px;
       }
     }
 
@@ -173,23 +191,22 @@
   }
 
   .info-box {
-    padding: 16px;
+    padding: 10px;
     width: auto;
     display: flex;
-    border-radius: 16px;
-    box-shadow:
-      0px 5px 10px 0px rgba(0, 0, 0, 0.05),
-      1px 19px 19px 0px rgba(0, 0, 0, 0.04),
-      3px 43px 26px 0px rgba(0, 0, 0, 0.03),
-      5px 76px 31px 0px rgba(0, 0, 0, 0.01),
-      8px 119px 33px 0px rgba(0, 0, 0, 0);
-    //background: $color-white;
+    border-radius: 10px;
+    background: $color-white;
+
+    &__icon  {
+      margin-right: 18px;
+      width: 34px;
+    }
   }
 
   .circle {
     width: 22px;
     height: 22px;
-    //background: $color-blue-light;
+    background: $color-blue;
     border-radius: 50%;
   }
 </style>
