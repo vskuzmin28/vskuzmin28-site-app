@@ -12,32 +12,6 @@ a {
   transition: 0.4s;
 }
 
-.button {
-  margin: 0;
-  padding: 12px;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 36px;
-  border: 1px solid $color-blue;
-
-  &_circle {
-    border-radius: 50%;
-  }
-
-  &_blue {
-    padding: 12px 36px;
-    background: $color-blue;
-    color: $color-white;
-  }
-
-  &--disabled {
-    background: $color-gray;
-    border-color: $color-gray;
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-}
-
 @media (hover: hover) {
   // a:hover {
   //   background-color: hsla(160, 100%, 37%, 0.2);

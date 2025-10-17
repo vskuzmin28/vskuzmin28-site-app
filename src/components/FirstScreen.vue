@@ -70,14 +70,24 @@
     padding: 0 0 60px 0;
     background: $color-gray-light;
 
+    @media screen and (max-width: $tablet) {
+      overflow: hidden;
+    }
+
     &__container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+
+      @media screen and (max-width: $tablet) {
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+      }
     }
 
+    // left
     &__content {
       max-width: 464px;
       cursor: default;
@@ -88,6 +98,10 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      @media screen and (max-width: $tablet) {
+        margin-top: 20px;
+      }
     }
 
     &__title {
@@ -96,10 +110,19 @@
       font-size: 48px;
       color: $color-black;
 
+      @media screen and (max-width: $tablet) {
+        margin-bottom: 36px;
+        font-size: 36px;
+      }
+
       &_small {
         font-family: $montserrat-600;
         font-size: 24px;
         color: $color-blue;
+
+        @media screen and (max-width: $tablet) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -107,16 +130,27 @@
       font-family: $montserrat-500;
       font-size: 20px;
       color: $color-gray;
+
+      @media screen and (max-width: $tablet) {
+        padding-left: 3px;
+        font-size: 16px;
+      }
     }
 
     &__button {
       margin-right: 24px !important;
     }
 
+    // right
     &__about {
       margin-top: 120px;
       position: relative;
       max-width: 614px;
+
+      @media screen and (max-width: $tablet) {
+        margin-top: 120px;
+        max-width: 50%;
+      }
     }
 
     &__info-box {
@@ -152,18 +186,35 @@
 
     &__banner {
       position: relative;
-      width: 700px;
+      max-width: 700px;
+      
+
+      @media screen and (max-width: $tablet) {
+        max-width: 50%;
+        width: 50%;
+      }
 
       svg {
         height: 606px;
+
+        @media screen and (max-width: $tablet) {
+          width: 500px;
+          height: 400px;
+        }
       }
 
       &-image {
         top: -128px;
-        right: 0px;
+        left: -100px;
         position: absolute;
         width: auto;
         max-height: 750px;
+
+        @media screen and (max-width: $tablet) {
+          top: -134px;
+          left: -50px;
+          max-height: 550px;
+        }
       }
     }
 
