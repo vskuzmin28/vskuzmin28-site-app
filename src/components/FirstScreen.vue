@@ -47,7 +47,6 @@
     padding: 8% 0 0 0;
     background: #F6FAFF;
     min-height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,6 +54,7 @@
 
     // container
     &__container {
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
