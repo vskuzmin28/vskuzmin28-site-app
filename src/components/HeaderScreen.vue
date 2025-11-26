@@ -23,7 +23,7 @@
     //-       a.navigation__link(href="/" title="")
     //-         | Контакты
 
-    a.header__button.button.button_blue(href="../public/resume_kuzmin_v_hh.pdf" title="")
+    a.header__button.button.button_blue(href="../assets/docs/resume_kuzmin_v.pdf" title="")
       | Скачать CV
 </template>
 
@@ -34,7 +34,12 @@
     max-width: 1280px;
 
     @media screen and (max-width: $desktop) {
-      padding: 0 20px;
+      padding: 10px 20px;
+    }
+
+    @media screen and (min-width: 440px) and (max-width: 1280px) {
+      margin: 0 auto 0 auto;
+      width: 600px;
     }
   }
 
@@ -65,7 +70,10 @@
 }
 
   .header {
+    top: 0;
+    position: absolute;
     width: 100%;
+    background: #fff;
 
     &__container {
       padding: 28px 0;
@@ -74,25 +82,22 @@
       justify-content: space-between;
       flex-wrap: wrap;
 
-      @media screen and (max-width: $desktop) {
+      @media screen and (max-width: $mobile) {
         padding: 10px 20px;
-        //justify-content: center;
       }
     }
 
-    &__logo-image {
-      max-width: 190px;
-      height: auto;
-      transition: 0.4s;
-
-      &:hover {
-        opacity: 0.75;
+    &__logo svg {
+      @media screen and (max-width: $mobile) {
+        margin: 4px 0 0 -30px;
+        height: 40px;
       }
     }
 
     &__button {
-      @media screen and (max-width: $desktop) {
-        display: none;
+      @media screen and (max-width: $mobile) {
+        padding: 12px 20px;
+        font-size: 12px;
       }
     }
   }

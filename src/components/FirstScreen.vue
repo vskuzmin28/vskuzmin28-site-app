@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import IconFirstScreenBanner from './icons/IconFirstScreenBanner.vue'
   import IconTelegram from './icons/IconTelegram.vue'
   import IconGithub from './icons/IconGithub.vue'
   import IconChecklist from './icons/IconChecklist.vue'
@@ -12,96 +11,87 @@
           
 <template lang="pug">
   .first-screen 
-      .first-screen__container.container
-          .first-screen__content 
-              h4.first-screen__title_small 
-                  | Руководитель ИТ-проектов
-              h1.first-screen__title 
-                  | Виталий Кузьмин
-              p.first-screen__description 
-                  | Более 5-ти лет управления IT-проектами различной сложности в заказной веб-разработке.
-                  | Опыт в ИТ 12 лет.
+    .first-screen__container.container
+      
+      // content
+      .first-screen__content
+        h4.first-screen__title_small 
+            | Руководитель ИТ-проектов
+        h1.first-screen__title 
+            | Виталий Кузьмин
+        p.first-screen__description 
+            | Более 5-ти лет управления IT-проектами различной сложности в заказной веб-разработке
+            | Опыт в ИТ 12 лет
 
-              .first-screen__field 
-                  a.first-screen__button.button.button_circle(href="https://www.linkedin.com/in/vskuzmin28/" target="_blank" title="")
-                      <IconLinkedin />
-                  a.first-screen__button.button.button_circle(href="https://career.habr.com/vskuzmin28" target="_blank" title="")
-                      <IconHabr />
-                  a.first-screen__button.button.button_circle(href="https://github.com/vskuzmin28" target="_blank" title="")
-                      <IconGithub />
-                  a.first-screen__button.button.button_circle(href="https://t.me/vskuzmin28" target="_blank" title="")
-                      <IconTelegram />
+        // social buttons
+        .first-screen__social-buttons
+            a.first-screen__button.button.button_circle(href="https://www.linkedin.com/in/vskuzmin28/" target="_blank" title="")
+                <IconLinkedin />
+            a.first-screen__button.button.button_circle(href="https://career.habr.com/vskuzmin28" target="_blank" title="")
+                <IconHabr />
+            a.first-screen__button.button.button_circle(href="https://github.com/vskuzmin28" target="_blank" title="")
+                <IconGithub />
+            a.first-screen__button.button.button_circle(href="https://t.me/vskuzmin28" target="_blank" title="")
+                <IconTelegram />
 
-          .first-screen__about
-              //- .first-screen__info-box.first-screen__info-box_top.info-box
-              //-     .info-box__icon 
-              //-         <IconClients />
-              //-     .info-box__content
-              //-         .info-box__title
-              //-             | 25
-              //-         .info-box__description 
-              //-             | Проектов
-
-              //- .first-screen__info-box.first-screen__info-box_bottom.info-box 
-              //-     .info-box__icon 
-              //-         <IconClients />
-              //-     .info-box__content
-              //-         .info-box__title
-              //-             | 15
-              //-         .info-box__description 
-              //-             | Клиентов
-
-              //- .first-screen__circle.first-screen__circle_top.circle 1
-              //- .first-screen__circle.first-screen__circle_bottom.circle 2
-              //- .first-screen__icon-graph
-              //-     <IconGraph />
-              //-     | 1
-              //- .first-screen__icon-check
-              //-     <IconChecklist />
-              //-     | 2
-              .first-screen__banner
-                img.first-screen__banner-image(src="/src/assets/images/about.png" alt="@@")
-                <IconFirstScreenBanner />
+      // preview
+      .first-screen__preview
+        .first-screen__preview-background
+          img.first-screen__banner-image(src="/src/assets/images/about.png" alt="@@")
 
 </template>
 
 <style lang="scss">
   .first-screen {
-    padding: 0 0 60px 0;
-    background: $color-gray-light;
+    margin: 0;
+    padding: 8% 0 0 0;
+    background: #F6FAFF;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-    @media screen and (max-width: $tablet) {
-      overflow: hidden;
-    }
-
+    // container
     &__container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      height: 100%;
 
       @media screen and (max-width: $tablet) {
-        justify-content: center;
-        flex-wrap: wrap-reverse;
+        padding: 10px 20px 20px 20px;
+        flex-direction: column-reverse;
       }
     }
 
-    // left
+    // content
     &__content {
-      max-width: 464px;
-      cursor: default;
+      width: 50%;
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 16%;
+        width: 100%;
+      }
+
+      @media screen and (min-width: 440px) and (max-width: 1280px) {
+        margin: 20% auto 0 auto;
+        width: 600px;
+      }
     }
 
-    &__field {
+    &__social-buttons {
       margin-top: 40px;
       display: flex;
       flex-direction: row;
       align-items: center;
+    }
 
-      @media screen and (max-width: $tablet) {
-        margin-top: 20px;
-      }
+    &__button {
+      margin-right: 24px;
+      background: $color-white;
     }
 
     &__title {
@@ -110,9 +100,9 @@
       font-size: 48px;
       color: $color-black;
 
-      @media screen and (max-width: $tablet) {
-        margin-bottom: 36px;
-        font-size: 36px;
+      @media screen and (max-width: $mobile) {
+        margin-bottom: 28px;
+        font-size: 28px;
       }
 
       &_small {
@@ -120,7 +110,7 @@
         font-size: 24px;
         color: $color-blue;
 
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: $mobile) {
           font-size: 16px;
         }
       }
@@ -131,134 +121,76 @@
       font-size: 20px;
       color: $color-gray;
 
-      @media screen and (max-width: $tablet) {
+      @media screen and (max-width: $mobile) {
         padding-left: 3px;
         font-size: 16px;
       }
     }
 
-    &__button {
-      margin-right: 24px !important;
-    }
-
-    // right
-    &__about {
-      margin-top: 120px;
+    // preview
+    &__preview {
       position: relative;
-      max-width: 614px;
+      width: 50%;
 
-      @media screen and (max-width: $tablet) {
-        margin-top: 120px;
-        max-width: 50%;
-      }
-    }
-
-    &__info-box {
-      position: absolute;
-      z-index: 10;
-
-      &_top {
-        top: 128px;
-        left: -12px;
-        
-      }
-
-      &_bottom {
-        top: 486px;
-        right: 81px;
-      }
-    }
-
-    &__circle {
-      position: absolute;
-      z-index: 110;
-
-      &_top {
-        top: 357px;
-        right: 592px;
-      }
-
-      &_bottom {
-        top: 456px;
-        right: 3px;
+      @media screen and (max-width: $mobile) {
+        width: 100%;
       }
     }
 
     &__banner {
-      position: relative;
-      max-width: 700px;
-      
-
-      @media screen and (max-width: $tablet) {
-        max-width: 50%;
-        width: 50%;
-      }
-
-      svg {
-        height: 606px;
-
-        @media screen and (max-width: $tablet) {
-          width: 500px;
-          height: 400px;
-        }
-      }
-
       &-image {
-        top: -128px;
-        left: -100px;
+        margin: 2.8% 0 0 0;
+        padding: 0;
         position: absolute;
-        width: auto;
-        max-height: 750px;
-
-        @media screen and (max-width: $tablet) {
-          top: -134px;
-          left: -50px;
-          max-height: 550px;
-        }
+        width: 100%;
       }
     }
 
-    &__icon-graph {
-      position: absolute;
-      top: 83px;
-      right: 31px;
-      width: 58px;
-      height: 58px;
+    &__preview-background {
+      position: relative;
+      width: 640px;
+      height: 440px;
+      background: linear-gradient(90deg, #007AFF 100%);
+      border-radius: 60px;
+      transform: skew(-0deg, -10deg);
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 24%;
+        width: 100%;
+        height: 230px;
+        border-radius: 30px;
+      }
+
+        @media screen and (min-width: 440px) and (max-width: 1280px) {
+          margin: 20% auto 0 auto;
+          width: 600px;
+          height: 380px;
+        }
+
+      img {
+        padding: 0;
+        bottom: -6.6%;
+        position: absolute;
+        transform: skew(0deg, 9.3deg);
+
+        @media screen and (max-width: $mobile) {
+          bottom: -7.7%;
+          transform: skew(0deg, 9.3deg);
+        }
+
+        @media screen and (min-width: 440px) and (max-width: 1280px) {
+          bottom: -7.3%;
+          transform: skew(0deg, 9.3deg);
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 375px) {
+          bottom: -6%;
+          transform: skew(0deg, 9.3deg);
+        }
+
+      }
     }
 
-    &__icon-check {
-      top: 199px;
-      left: 14px;
-      position: absolute;
-      width: 58px;
-      height: 58px;
-    }
-
-    &__image {
-      margin-left: 44px;
-      width: 516px;
-      height: 554px;
-    }
-  }
-
-  .info-box {
-    padding: 10px;
-    width: auto;
-    display: flex;
-    border-radius: 10px;
-    background: $color-white;
-
-    &__icon  {
-      margin-right: 18px;
-      width: 34px;
-    }
-  }
-
-  .circle {
-    width: 22px;
-    height: 22px;
-    background: $color-blue;
-    border-radius: 50%;
   }
 </style>
           
