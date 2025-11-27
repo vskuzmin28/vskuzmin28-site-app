@@ -21,7 +21,7 @@
 
       Button( 
         class="button_blue header__button" 
-        href="/src/assets/docs/resume_kuzmin_v.pdf" 
+        href="../assets/docs/resume_kuzmin_v.pdf" 
         text="Скачать CV" 
       )/
 
@@ -61,7 +61,7 @@
               IconTelegram
 
       Person(
-        imageSrc="/src/assets/images/about.png"
+        imageSrc="../assets/images/about.png"
         altText="Виталий Кузьмин"
       )
 </template>
