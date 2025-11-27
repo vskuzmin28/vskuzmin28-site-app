@@ -3,11 +3,13 @@
 
   const attrs = useAttrs()
 
-  defineProps({
+  interface Props {
     role: String,
     name: String,
     description: String 
-  })
+  }
+
+  defineProps<Props>()
 </script>
 
 <template lang="pug">

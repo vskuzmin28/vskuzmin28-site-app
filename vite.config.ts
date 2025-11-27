@@ -13,21 +13,17 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'src/assets/docs/**/*',  // Копируем все файлы из docs
+          src: 'src/assets/docs/**/*',
           dest: 'assets/docs'
         },
         {
-          src: 'src/assets/images/**/*', // Копируем все изображения
+          src: 'src/assets/images/**/*',
           dest: 'assets/images'
         },
         {
-          src: 'src/assets/fonts/**/*',  // Копируем шрифты
+          src: 'src/assets/fonts/**/*',
           dest: 'assets/fonts'
         }
-        // {
-        //   src: 'src/assets/icons/**/*',  // Копируем иконки
-        //   dest: 'assets/icons'
-        // }
       ]
     })
   ],
@@ -50,22 +46,25 @@ export default defineConfig({
     }
   },
   build: {
-    assetsDir: 'assets',  // Указываем папку для assets
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
-        // Правильное именование файлов
         assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.')[1]
+          // Добавляем проверку на undefined
+          if (!assetInfo.name) {
+            return 'assets/[name]-[hash][extname]'
+          }
+          
+          const extType = assetInfo.name.split('.')[1]
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'images'
+            return 'assets/images/[name]-[hash][extname]'
           }
           if (/woff|woff2|eot|ttf|otf/i.test(extType)) {
-            extType = 'fonts'
+            return 'assets/fonts/[name]-[hash][extname]'
           }
-          return `assets/${extType}/[name]-[hash][extname]`
+          return 'assets/[name]-[hash][extname]'
         }
       }
     }
   }
 })
-
