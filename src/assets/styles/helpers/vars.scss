@@ -1,14 +1,7 @@
 // COLORS
-// white
 $color-white: #fff;
-
-// black
 $color-black: #222C44;
-
-// blue
 $color-blue: #007AFF;
-
-// gray
 $color-gray-light: #F6FAFF;
 $color-gray: #57595F;
 
@@ -20,9 +13,12 @@ $montserrat-600: 'Montserrat-SemiBold';
 $montserrat-700: 'Montserrat-Bold';
 
 // Breakpoints
-$mobile: 1280px;
-$tablet: 1140px;
-$desktop: 1280px;
 
-// // Animation
-// $transition-base: all 0.25s ease-out;
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+$large: 1440px;
+
+// Animation
+$transition-base: all 0.25s ease-out;

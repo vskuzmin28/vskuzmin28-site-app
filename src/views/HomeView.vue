@@ -20,7 +20,7 @@
       )/
 
       Button( 
-        class="button_blue header__button" 
+        class="button_white header__button" 
         href="../assets/docs/resume_kuzmin_v.pdf" 
         text="Скачать CV" 
       )/
@@ -29,7 +29,6 @@
   .first-screen 
     .first-screen__container.container
       PersonInfo(
-        class="first-screen__content"
         role="Руководитель ИТ-проектов"
         name="Виталий Кузьмин"
         description="Более 5-ти лет управления IT-проектами различной сложности в заказной веб-разработке"
@@ -75,11 +74,7 @@
 
     @media screen and (max-width: $desktop) {
       padding: 10px 20px;
-    }
-
-    @media screen and (min-width: 440px) and (max-width: 1280px) {
-      margin: 0 auto 0 auto;
-      width: 600px;
+      width: 100%;
     }
   }
 
@@ -97,12 +92,25 @@
       justify-content: space-between;
       flex-wrap: wrap;
 
+      @media screen and (max-width: $desktop) {
+        padding: 10px 20px;
+      }
+
+      @media screen and (max-width: $tablet) {
+        padding: 10px 15%;
+      }
+
       @media screen and (max-width: $mobile) {
         padding: 10px 20px;
       }
     }
 
     &__logo svg {
+      @media screen and (max-width: $laptop) {
+        margin: 4px 0 0 -20px;
+        height: 46px;
+      }
+
       @media screen and (max-width: $mobile) {
         margin: 4px 0 0 -30px;
         height: 40px;
@@ -110,8 +118,10 @@
     }
 
     &__button {
+      padding: 10px 20px;
+
       @media screen and (max-width: $mobile) {
-        padding: 12px 20px;
+        padding: 10px 20px;
         font-size: 12px;
       }
     }
@@ -139,6 +149,7 @@
       @media screen and (max-width: $tablet) {
         padding: 10px 20px 20px 20px;
         flex-direction: column-reverse;
+        justify-content: center;
       }
     }
   }

@@ -26,6 +26,20 @@
       border-radius: 50%;
     }
 
+    &_white {
+      padding: 12px 36px;
+      background: $color-white;
+      color: $color-blue;
+      font-weight: 600;
+      border: 2px solid $color-blue;
+
+      &:hover {
+        background: $color-blue;
+        color: $color-white;
+      }
+    }
+
+
     &_blue {
       padding: 12px 36px;
       background: $color-blue;

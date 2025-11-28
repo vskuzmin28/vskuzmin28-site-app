@@ -37,16 +37,46 @@
 
 <style lang="scss">
   .person-info {
+
+    @media screen and (max-width: $tablet) {
+      width: 70%;
+    }
+    
+    @media screen and (max-width: $mobile) {
+      margin-top: 10px;
+      width: 100%;
+    }
+
     &__social-buttons {
       margin-top: 40px;
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      @media screen and (max-width: $tablet) {
+        margin-top: 16px;
+      }
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 30px;
+      }
     }
 
     &__button {
       margin-right: 24px;
       background: $color-white;
+
+      @media screen and (max-width: $tablet) {
+        zoom: 0.8;
+      }
+
+      &:hover {
+        background: $color-blue;
+
+        svg {
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(98deg) brightness(107%) contrast(108%);
+        }
+      }
     }
 
     &__title {
@@ -55,17 +85,28 @@
       font-size: 48px;
       color: $color-black;
 
-      @media screen and (max-width: $mobile) {
-        margin-bottom: 28px;
+      @media screen and (max-width: $laptop) {
+        margin-bottom: 24px;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: $laptop) {
+        margin-bottom: 18px;
         font-size: 28px;
       }
 
       &_small {
+        margin-bottom: 0px;
         font-family: $montserrat-600;
         font-size: 24px;
         color: $color-blue;
 
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $laptop) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: $laptop) {
+          margin-bottom: 6px;
           font-size: 16px;
         }
       }
@@ -76,17 +117,15 @@
       font-size: 20px;
       color: $color-gray;
 
+      @media screen and (max-width: $laptop) {
+        width: 80%;
+        font-size: 16px;
+      }
+
       @media screen and (max-width: $mobile) {
         padding-left: 3px;
         font-size: 16px;
       }
-    }
-
-    &__social-buttons {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
     }
   }
 </style>
