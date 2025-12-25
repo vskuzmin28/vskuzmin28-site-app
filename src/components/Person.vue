@@ -344,6 +344,8 @@
     border-radius: 10px;
     background: $color-white;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    cursor: default;
+    user-select: none;
 
     @media screen and (max-width: $laptop) {
       margin-top: 40px;
