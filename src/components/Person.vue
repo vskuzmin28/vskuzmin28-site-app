@@ -212,6 +212,7 @@
       .person__preview-background(ref="previewBackgroundRef")
         img(
           ref="imageRef"
+          draggable="false"
           :src="imageSrc" 
           :alt="altText"
           :class="imageClass"
@@ -309,6 +310,7 @@
       background: linear-gradient(90deg, #007AFF 100%);
       border-radius: 20px;
       transform: skew(-0deg, -10deg);
+      user-select: none;
 
       @media screen and (max-width: $desktop) {
         zoom: 76%;
