@@ -307,7 +307,7 @@
       position: relative;
       width: 640px;
       height: 440px;
-      background: linear-gradient(90deg, #007AFF 100%);
+      background: linear-gradient(180.00deg, rgba(28, 190, 238, 1),rgba(0, 122, 255, 1) 100%);
       border-radius: 20px;
       transform: skew(-0deg, -10deg);
       user-select: none;
