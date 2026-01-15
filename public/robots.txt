@@ -1,0 +1,36 @@
+# ============================================
+# Robots.txt для vskuzmin28-site-app
+# ============================================
+
+User-agent: *
+Allow: /
+
+# Блокируем доступ к служебным файлам
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /*.config.js
+Disallow: /package.json
+Disallow: /vite.config.js
+Disallow: /*.map
+
+# Блокируем параметры отслеживания
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?source=
+Disallow: /*?session
+
+# Разрешаем поисковым системам индексировать динамические маршруты
+Allow: /*/$
+Allow: /*/index.html
+
+# Задержка для уважения сервера
+Crawl-delay: 0.5
+
+# Карта сайта
+# Sitemap: https://vskuzmin28.vitosh.ru/sitemap.xml
+# Sitemap: https://www.vskuzmin28.vitosh.ru/sitemap.xml
+
+# Host
+Host: vskuzmin28.vitosh.ru
