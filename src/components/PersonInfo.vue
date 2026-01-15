@@ -81,6 +81,7 @@
 
     &__title {
       margin-bottom: 48px;
+      margin-left: -2px;
       font-family: $montserrat-700;
       font-size: 48px;
       color: $color-black;
@@ -97,6 +98,7 @@
 
       &_small {
         margin-bottom: 0px;
+        margin-left: 0;
         font-family: $montserrat-600;
         font-size: 24px;
         color: $color-blue;

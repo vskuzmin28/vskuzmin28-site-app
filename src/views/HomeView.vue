@@ -3,6 +3,7 @@
   import Button from '@/components/Button.vue'
   import PersonInfo from '@/components/PersonInfo.vue'
   import Person from '@/components/Person.vue'
+  import Clients from '@/components/Clients.vue'
 
   import IconTelegram from '@/components/icons/IconTelegram.vue'
   import IconGithub from '@/components/icons/IconGithub.vue'
@@ -62,7 +63,50 @@
       Person(
         imageSrc="../assets/images/about.png"
         altText="Виталий Кузьмин"
+      )/
+
+  // clients
+  .clients
+    .clients__container.container
+      Clients(
+        title="Клиенты"
       )
+        template(#clients)
+          .clients__list
+            .clients__item
+              img.clients__image(
+                src="../assets/images/clients/vtb.png"
+                alt="Банк ВТБ"
+              )
+              p.clients__name Банк ВТБ
+
+            .clients__item
+              img.clients__image(
+                src="../assets/images/clients/cska.png"
+                alt="ПФК ЦСКА"
+              )
+              p.clients__name ПФК ЦСКА
+
+            .clients__item
+              img.clients__image.clients__image_small(
+                src="../assets/images/clients/bfh.png"
+                alt="БФХ"
+              )
+              p.clients__name БФХ
+
+            .clients__item
+              img.clients__image(
+                src="../assets/images/clients/rfs.png"
+                alt="РФС"
+              )
+              p.clients__name РФС
+
+            .clients__item
+              img.clients__image(
+                src="../assets/images/clients/gpn.png"
+                alt="ГПН"
+              )
+              p.clients__name ГАЗПРОМНЕФТЬ
 </template>
 
 <style lang="scss">
@@ -150,6 +194,29 @@
         padding: 10px 20px 20px 20px;
         flex-direction: column-reverse;
         justify-content: center;
+      }
+    }
+
+      @media screen and (max-width: $tablet) {
+        min-height: auto;
+      }
+  }
+
+  // clients
+  .clients {
+    &__container {
+      padding: 72px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      @media screen and (max-width: $tablet) {
+        padding: 30px 0px 30px 20px;
+        justify-content: center;
+        overflow-x: inherit;
       }
     }
   }

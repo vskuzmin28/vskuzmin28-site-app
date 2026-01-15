@@ -13,3 +13,9 @@
   )
 	  <IconLogo />
 </template>
+
+<style lang="scss">
+  .logo svg {
+    height: 50px;
+  }
+</style>
