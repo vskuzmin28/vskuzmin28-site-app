@@ -40,13 +40,12 @@
       color: $color-black;
 
       @media screen and (max-width: $laptop) {
-        margin-bottom: 24px;
-        font-size: 24px;
-      }
-
-      @media screen and (max-width: $laptop) {
         margin-bottom: 18px;
         font-size: 28px;
+      }
+
+      @media screen and (max-width: $tablet) {
+        padding-left: 20px;
       }
 
       &_small {
@@ -54,10 +53,6 @@
         font-family: $montserrat-600;
         font-size: 24px;
         color: $color-blue;
-
-        @media screen and (max-width: $laptop) {
-          font-size: 14px;
-        }
 
         @media screen and (max-width: $laptop) {
           margin-bottom: 6px;
@@ -74,6 +69,7 @@
       width: 100%;
 
       @media screen and (max-width: $tablet) {
+        padding-bottom: 30px;
         justify-content: flex-start;
         overflow-x: scroll;
       }
@@ -88,7 +84,7 @@
 
       @media screen and (max-width: $tablet) {
         margin-left: 0;
-        margin-right: 24px;
+        margin-right: 22px;
         min-width: 34%;
       }
     }
@@ -107,9 +103,9 @@
         height: 100px;
 
         @media screen and (max-width: $tablet) {
-          margin-top: 20px;
+          margin-top: 14px;
           height: 60px;
-          margin-bottom: 22px;
+          margin-bottom: 28px;
         }
       }
     }

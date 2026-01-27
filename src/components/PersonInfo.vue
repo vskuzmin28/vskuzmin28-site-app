@@ -87,12 +87,8 @@
       color: $color-black;
 
       @media screen and (max-width: $laptop) {
-        margin-bottom: 24px;
-        font-size: 24px;
-      }
-
-      @media screen and (max-width: $laptop) {
         margin-bottom: 18px;
+        margin-left: -1px;
         font-size: 28px;
       }
 
@@ -102,10 +98,6 @@
         font-family: $montserrat-600;
         font-size: 24px;
         color: $color-blue;
-
-        @media screen and (max-width: $laptop) {
-          font-size: 14px;
-        }
 
         @media screen and (max-width: $laptop) {
           margin-bottom: 6px;
@@ -125,7 +117,6 @@
       }
 
       @media screen and (max-width: $mobile) {
-        padding-left: 3px;
         font-size: 16px;
       }
     }

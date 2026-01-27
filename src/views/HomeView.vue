@@ -214,7 +214,7 @@
       height: 100%;
 
       @media screen and (max-width: $tablet) {
-        padding: 30px 0px 30px 20px;
+        padding: 30px 0px 30px 0px;
         justify-content: center;
         overflow-x: inherit;
       }
